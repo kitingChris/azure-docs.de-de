@@ -114,6 +114,13 @@ Die folgenden Schritte verwenden [APT](https://wiki.debian.org/Apt) zum Installi
     | Ubuntu 17.04    | `zesty`     |
     | Ubuntu 16.04/Linux Mint 18    | `xenial`  |
 
+Für Debian Systeme führen Sie zum hinzufügen der Apt-Quelle Folgendes aus:
+
+    ```bash
+    sudo apt-get update
+    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/debian/$(lsb_release -rs)/prod $(lsb_release -cs) main" > /etc/apt/sources.list.d/dotnetdev.list'
+    ```
+
 1. Installieren Sie das Core Tools-Paket:
 
     ```bash
